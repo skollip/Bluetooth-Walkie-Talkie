@@ -1,0 +1,12 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<body class = "light" bgcolor = "#F0FFFF" font="arial">
+<h2> Practical Problems </h2>
+<p>
+    During the course of this project there were a few problems that we ran into. In our original design, we had planned on using a chat system where users could join channels and talk to other users in that channel freely. This ended up become very complex and so we changed the scope of the design to be a direct device-to-device communication between two users. Another issue that came up was that our UI was becoming very cluttered as we kept adding functionality. This was solved by manipulating the visibility of controls based on the current task being performed. Towards the end of the project we had a stability issue where task threads were getting blocked indefinitely on read calls. We were able to resolve the issue by checking for available data as a socket instream method before issuing the read data command. We had originally wanted to disable the talk button on the receiving device when audio data was being sent, but that proved difficult when working with one socket for communication. Currently if both talk buttons are pushed simultaneously, the received audio will play when the talk button is released (delayed but stable).
+</p>
+<p>
+    Based on our experience with this project, there are a few suggestions for future development that can improve functionality. Using more than one communication socket between each pair of devices can greatly help with flow control and device interactions. Use threads to run blocking methods (read/write) so that your UI does not freeze during execution. Use fragments to encapsulate UI functions. This allows for more screen real-estate and the ability to add similar functionality to future projects (modular code).
+</p>
+</body>
+</html>
